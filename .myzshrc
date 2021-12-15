@@ -7,32 +7,11 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-# Maven
-export PATH=/opt/apache-maven-3.6.3/bin:$PATH
-function mvnV() {
-   export PATH=/opt/apache-maven-"$1"/bin:$PATH
-   mvn -version
-}
-
 # Java
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-#export JAVA_HOME=$(/usr/libexec/java_home -v "11")
-#export JAVA_8_HOME=$JAVA_HOME
-#export JAVA_11_HOME=$JAVA_HOME
-#export JAVA_17_HOME=$JAVA_HOME
-#function jdk() {
-#   export JAVA_HOME=$(/usr/libexec/java_home -v "$1")
-#   export JAVA_8_HOME=$JAVA_HOME
-#   export JAVA_11_HOME=$JAVA_HOME
-#   export JAVA_17_HOME=$JAVA_HOME
-#   #export PATH="/usr/local/opt/openjdk@$1/bin:$PATH"
-#   java -version
-#}
-
 # Git
-
 unalias gcam 2</dev/null
 function gcam() {
     PREFIX=""
@@ -44,4 +23,6 @@ function gcam() {
    git commit -v -a -m "${PREFIX}$1"
 
 }
-alias listOpenConnections=jps | grep JUnit | awk '{print }' | xargs lsof -p | grep ESTABLISHED
+
+# Networking
+alias listOpenConnections="jps | grep JUnit | awk '{print }' | xargs lsof -p | grep ESTABLISHED"
