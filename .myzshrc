@@ -7,9 +7,8 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-# Java
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# SDKMan
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Git
 unalias gcam 2</dev/null

@@ -14,20 +14,19 @@ brew install --cask intellij-idea-ce
 brew install --cask pycharm-ce
 
 #Install Tech Stack
-brew install AdoptOpenJDK/openjdk/adoptopenjdk{8,11}
-brew install openjdk@17
-sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
-brew install jenv maven kotlin docker
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-jenv add /usr/local/Cellar/openjdk/17.0.1/libexec/openjdk.jdk/Contents/Home
+curl -s "https://get.sdkman.io" | bash
+sdk install java 17.0.1-zulu
+sdk install java 8.0.292.hs-adpt
+sdk install java 11.0.11.hs-adpt
+brew install maven kotlin docker
+brew tap gdubw/gng
+brew install gng
 
 #Db
 brew install postgresql
 
 # Communication
-brew install --cask microsoft-teams
-brew install --cask zoom
+brew install --cask slack zulip zoom microsift-teams
 
 # Install Misc
 brew install --cask opera
