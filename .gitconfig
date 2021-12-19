@@ -1,0 +1,5 @@
+
+[alias]
+	cleanup = "!git branch --merged | egrep -v '(^\\*|master|dev)' | xargs git branch -d"
+	unstage = reset HEAD --
+	last = log -1 HEAD
