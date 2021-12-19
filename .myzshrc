@@ -11,8 +11,13 @@ plugins=(
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Git
+
+unalias gcm 2</dev/null
+unalias gcmsg 2</dev/null
+alias gcm="git commit -m"
 unalias gcam 2</dev/null
-function gcam() {
+function gcam()
+{
     PREFIX=""
     if [[ $(git_current_branch) == *"EEX-"* ]] || [[ $(git_current_branch) == *"DBCG-"* ]] ;
     then
